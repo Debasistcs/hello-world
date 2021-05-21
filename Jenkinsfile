@@ -1,7 +1,21 @@
-stages {
+pipeline {
+    agent any
+    stages {
         stage('compile') {
             steps {
-                mvn compile
+                echo 'compile'
             }
         }
+        stage('test') {
+            steps {
+                echo 'test'
+            }
+        }
+        stage('package') {
+            steps {
+                echo 'package'
+            }
+        }
+    }
+}
   
